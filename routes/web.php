@@ -20,6 +20,8 @@ Route::get('/user/{name?}', function (?string $name = null) {
     return $name;
 });
 
+Route::get('/test', [\App\Http\Controllers\TestController::class, 'index']);
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
