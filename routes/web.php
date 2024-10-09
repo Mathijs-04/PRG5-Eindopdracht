@@ -7,6 +7,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/contact', function() {
+    $name = 'Sil';
+    return view('contact', ['name' => $name]);
+})->name('contact');
+
+Route::get('/products/{id}',function(string $id) {
+    return view('products', ['id' => $id]);
+});
+
+Route::get('/user/{name?}', function (?string $name = null) {
+    return $name;
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
