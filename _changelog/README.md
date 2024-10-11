@@ -10,10 +10,10 @@
 * Onderzoeksverslag afgemaakt
 
 ## 11/10/2024
-*Onderwerp eindopdracht gekozen
+* Onderwerp eindopdracht gekozen
 
 ## 12/10/2024
-*User Stories gemaakt
+* User Stories gemaakt
 
 ## 13/10/2024
-*ERD gemaakt
+* ERD gemaakt
