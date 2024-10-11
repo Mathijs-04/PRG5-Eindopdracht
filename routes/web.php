@@ -10,6 +10,7 @@ Route::get('/', function () {
 //Routes:
 //Homepage
 //Models
+//Details
 //About
 //Upload
 //Profile
