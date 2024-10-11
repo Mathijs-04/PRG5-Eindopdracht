@@ -7,24 +7,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/contact', function() {
-    $name = 'Sil';
-    return view('contact', ['name' => $name]);
-})->name('contact');
-
-Route::get('/products/{id}',function(string $id) {
-    return view('products', ['id' => $id]);
-});
-
-Route::get('/user/{name?}', function (?string $name = null) {
-    return $name;
-});
-
-Route::get('/aboutus', [\App\Http\Controllers\AboutUsController::class,'show']);
-
-Route::get('/test', [\App\Http\Controllers\TestController::class, 'index']);
-Route::get('/test/{id}', [\App\Http\Controllers\TestController::class, 'show']);
-
 
 Route::get('/dashboard', function () {
     return view('dashboard');
