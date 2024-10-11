@@ -7,6 +7,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//Routes:
+//Homepage
+//Models
+//About
+//Upload
+//Profile
+//Admin
 
 Route::get('/dashboard', function () {
     return view('dashboard');
