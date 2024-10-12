@@ -14,6 +14,8 @@
 
 ## 12/10/2024
 * User Stories gemaakt
+* ERD gemaakt
+
 
 ## 13/10/2024
-* ERD gemaakt
+* Routes en Views aangemaakt
