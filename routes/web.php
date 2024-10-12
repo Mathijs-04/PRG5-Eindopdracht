@@ -3,9 +3,16 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-//Routes:
-//Homepage
+Route::get('/', function () {
+    return view('welcome');
+});
 
+//Routes:
+
+//Homepage
+Route::get('/home', function() {
+    return view('home');
+});
 //Models
 Route::get('/models', function() {
     return view('models');
