@@ -3,15 +3,19 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
+//Routes:
+//Homepage
 Route::get('/', function () {
     return view('welcome');
 });
-
-//Routes:
-//Homepage
 //Models
-//Details
+Route::get('/models', function() {
+    return view('models');
+});
 //About
+Route::get('/about', function() {
+    return view('about');
+});
 //Upload
 //Profile
 //Admin
