@@ -5,9 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 //Routes:
 //Homepage
-Route::get('/', function () {
-    return view('welcome');
-});
+
 //Models
 Route::get('/models', function() {
     return view('models');
