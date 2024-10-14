@@ -10,6 +10,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//Login-check
+Route::get('/check', function () {
+    return view('check');
+});
 //Routes:
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/models', [ModelsController::class, 'index'])->name('models');
