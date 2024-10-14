@@ -1,3 +1,3 @@
-<h1>About</h1>
-<p>This is the About page</p>
-<a href="http://127.0.0.1:8000/home">Home</a>
+<x-layout>
+    <h1>Welcome to the About page</h1>
+</x-layout>

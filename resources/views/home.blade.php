@@ -1,5 +1,3 @@
-<h1>Home</h1>
-<p>This is the Homepage</p>
-<a href="http://127.0.0.1:8000/models">Models</a>
-<a href="http://127.0.0.1:8000/about">About</a>
-
+<x-layout>
+    <h1>Welcome to the Home page</h1>
+</x-layout>
