@@ -20,6 +20,7 @@
 * Routes en Views aangemaakt
 
 ## 14/10/2024
+* Database gemaakt
 * Onderdelen voor ingelogde gebruikers gemaakt
 * Navigatie met components gemaakt
 
