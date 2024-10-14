@@ -16,6 +16,10 @@
 * User Stories gemaakt
 * ERD gemaakt
 
-
 ## 13/10/2024
 * Routes en Views aangemaakt
+
+## 14/10/2024
+* Onderdelen voor ingelogde gebruikers gemaakt
+* Navigatie met components gemaakt
+
