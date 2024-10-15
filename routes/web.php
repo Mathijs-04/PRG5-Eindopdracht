@@ -17,6 +17,7 @@ Route::get('/check', function () {
 //Routes:
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/posts', [PostController::class, 'index'])->name('posts');
+Route::get('/posts/{id}', [PostController::class, 'show'])->name('show');
 Route::get('/about', [AboutController::class, 'index'])->name('about');
 
 Route::get('/dashboard', function () {
