@@ -1,8 +1,8 @@
-{{--Login Check--}}
+
 <x-layout>
     @auth
-        <h1>This user is logged in</h1>
+        <h1 class="pb-[70vh]">This user is logged in</h1>
     @else
-        <h1>This user is not logged in</h1>
+        <h1 class="pb-[70vh]">This user is not logged in</h1>
     @endauth
 </x-layout>
