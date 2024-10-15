@@ -5,9 +5,9 @@
             <br>
             {{ $post ->title }}
             <br>
-            {{ $post ->description }}
-            <br>
             {{ $post ->image_url }}
+            <br>
+            <a href="{{ route('show', ['id' => $post->id]) }}">Details</a>
             <br>
         </section>
     @endforeach
