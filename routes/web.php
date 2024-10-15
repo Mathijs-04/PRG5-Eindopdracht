@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\ModelsController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -16,7 +16,7 @@ Route::get('/check', function () {
 });
 //Routes:
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/models', [ModelsController::class, 'index'])->name('models');
+Route::get('/posts', [PostController::class, 'index'])->name('posts');
 Route::get('/about', [AboutController::class, 'index'])->name('about');
 
 Route::get('/dashboard', function () {
