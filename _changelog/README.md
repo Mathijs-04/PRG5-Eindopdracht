@@ -27,5 +27,7 @@
 ## 15/10/2024
 * Database gemaakt
 * Migrations uitgevoerd
+* Database data op posts-pagina
+* Detailpagina posts gemaakt
 
 
