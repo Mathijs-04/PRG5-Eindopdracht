@@ -61,6 +61,7 @@
     <x-nav-link href="/" :active="request()->routeIs('home')">Home</x-nav-link>
     <x-nav-link href="/posts" :active="request()->routeIs('posts')">Posts</x-nav-link>
     <x-nav-link href="/about" :active="request()->routeIs('about')">About</x-nav-link>
+    <x-nav-link href="/check" :active="request()->routeIs('check')">Check</x-nav-link>
 </nav>
 
 {{$slot}}

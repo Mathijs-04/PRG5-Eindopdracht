@@ -1,5 +1,5 @@
 <x-layout>
-    <h1 class="mb-[5vh]">Welcome to the Posts page</h1>
+    <h1>Welcome to the Posts page</h1>
     @foreach($posts as $post)
         <section>
             <br>
@@ -11,4 +11,5 @@
             <br>
         </section>
     @endforeach
+    <div class="pb-[34.5vh]"></div>
 </x-layout>
