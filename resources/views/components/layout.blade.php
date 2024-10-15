@@ -58,7 +58,7 @@
 </header>
 
 <nav>
-    <x-nav-link href="/home" :active="request()->routeIs('home')">Home</x-nav-link>
+    <x-nav-link href="/" :active="request()->routeIs('home')">Home</x-nav-link>
     <x-nav-link href="/models" :active="request()->routeIs('models')">Models</x-nav-link>
     <x-nav-link href="/about" :active="request()->routeIs('about')">About</x-nav-link>
 </nav>

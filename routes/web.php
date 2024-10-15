@@ -6,7 +6,7 @@ use App\Http\Controllers\ModelsController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
+Route::get('/welcome', function () {
     return view('welcome');
 });
 
@@ -15,7 +15,7 @@ Route::get('/check', function () {
     return view('check');
 });
 //Routes:
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/models', [ModelsController::class, 'index'])->name('models');
 Route::get('/about', [AboutController::class, 'index'])->name('about');
 
