@@ -11,5 +11,5 @@
             <br>
         </section>
     @endforeach
-    <div class="pb-[34.5vh]"></div>
+    <div class="pb-[38.5vh]"></div>
 </x-layout>
