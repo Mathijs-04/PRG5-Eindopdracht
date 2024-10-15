@@ -24,3 +24,8 @@
 * Check voor ingelogde gebruikers gemaakt
 * Navigatie en styling toegevoegt
 
+## 15/10/2024
+* Database gemaakt
+* Migrations uitgevoerd
+
+
