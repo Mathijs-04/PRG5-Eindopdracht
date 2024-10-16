@@ -27,7 +27,13 @@
 <style>
     .grid-container {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 1fr;
         gap: 20px;
+    }
+
+    @media (min-width: 768px) {
+        .grid-container {
+            grid-template-columns: repeat(3, 1fr);
+        }
     }
 </style>
