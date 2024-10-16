@@ -29,5 +29,8 @@
 * Migrations uitgevoerd
 * Database data op posts-pagina
 * Detailpagina posts gemaakt
+* 
+## 16/10/2024
+* Styling aan overzicht toegevoegt
 
 
