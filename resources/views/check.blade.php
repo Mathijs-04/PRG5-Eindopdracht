@@ -1,4 +1,3 @@
-
 <x-layout>
     @auth
         <h1 class="pb-[70vh]">This user is logged in</h1>
