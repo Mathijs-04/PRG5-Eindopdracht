@@ -32,5 +32,7 @@
 * 
 ## 16/10/2024
 * Styling aan overzicht toegevoegt
+* Create functionaliteit gemaakt
+* One-to-many relaties gemaakt
 
 
