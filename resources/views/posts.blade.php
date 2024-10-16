@@ -4,7 +4,7 @@
         @foreach($posts as $post)
             <div class="max-w-sm bg-black-600 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <a href="#">
-                    <img class="rounded-t-lg" src="/images/placeholder.webp" alt="placeholder"/>
+                    <img class="rounded-t-lg" src="{{ $post->image_url }}" alt="placeholder"/>
                 </a>
                 <div class="p-5">
                     <a href="#">
