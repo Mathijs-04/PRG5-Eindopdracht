@@ -15,14 +15,14 @@ Route::get('/check', function () {
     return view('check');
 })->middleware('auth');
 
+//Resource Route:
+Route::resource('posts', PostController::class);
+
 //Routes:
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/posts', [PostController::class, 'index'])->name('posts');
 Route::get('/posts/{id}', [PostController::class, 'show'])->name('show');
 Route::get('/about', [AboutController::class, 'index'])->name('about');
-
-//Resource Route:
-Route::resource('posts', PostController::class);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
