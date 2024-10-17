@@ -11,7 +11,7 @@
 <nav class="bg-slate-700 border-gray-200 dark:bg-slate-700">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <div class="flex items-center space-x-3 rtl:space-x-reverse">
-            <img src="images/logo.webp" class="h-20" alt="Logo"/>
+            <img src="{{ asset('images/logo.webp') }}" class="h-20" alt="Logo"/>
             <span class="self-center text-4xl font-semibold whitespace-nowrap dark:text-white">Mighty Models</span>
         </div>
         <button data-collapse-toggle="navbar-default" type="button"
@@ -73,7 +73,7 @@
     </div>
 </nav>
 
-<body class="bg-gray-900">
+<body class="bg-gray-900 min-h-screen flex flex-col justify-between">
 
 <section class="px-8 md:px-64">
     {{$slot}}

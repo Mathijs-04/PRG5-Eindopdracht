@@ -1,4 +1,5 @@
 <x-layout>
+    <h1 class="text-4xl text-white font-sans my-4">Welcome to the Create page</h1>
     <form action="{{ url(route('posts.store')) }}" method="POST">
         @csrf
         <label for="title">Title:</label>
