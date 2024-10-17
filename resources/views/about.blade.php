@@ -10,8 +10,8 @@
     </p>
 
     <div class="flex justify-between mt-8">
-        <img class="w-1/3" src="images/dragon.webp" alt="dragon">
-        <img class="w-1/3" src="images/troll.webp" alt="troll">
-        <img class="w-1/3" src="images/captain.webp" alt="captain">
+        <img class="w-1/3" src="{{ asset('images/dragon.webp') }}" alt="dragon">
+        <img class="w-1/3" src="{{ asset('images/troll.webp') }}" alt="troll">
+        <img class="w-1/3" src="{{ asset('images/captain.webp') }}" alt="captain">
     </div>
 </x-layout>
