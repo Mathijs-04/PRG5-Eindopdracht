@@ -1,3 +1,3 @@
 <x-layout>
-    <h1 class="pb-[70vh]">Welcome to the About page</h1>
+    <h1 class="text-4xl text-white font-sans my-4">Welcome to the About page</h1>
 </x-layout>

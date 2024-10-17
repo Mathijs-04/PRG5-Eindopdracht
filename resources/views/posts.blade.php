@@ -1,5 +1,5 @@
 <x-layout>
-    <h1>Welcome to the Posts page</h1>
+    <h1 class="text-4xl text-white font-sans my-4">Welcome to the Posts page</h1>
     <div class="grid-container">
         @foreach($posts as $post)
             <div class="max-w-sm bg-black-600 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
