@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Date;
 class PostController extends Controller
 {
     public function index() {
-        $posts = Post::all();
+        $posts = Post::orderBy('created_at', 'desc')->get();
         return view('posts', compact('posts'));
     }
 
@@ -17,7 +17,6 @@ class PostController extends Controller
         $post = Post::find($id);
         return view('show', compact('post'));
     }
-
 
     /**
      * Show the form for creating a new resource.
