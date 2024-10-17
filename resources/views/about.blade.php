@@ -2,11 +2,11 @@
     <h1 class="text-4xl text-white font-sans my-4">About Mighty Models</h1>
 
     <p class="text-xl text-gray-500 dark:text-gray-400">
-        Mighty Models is a website for showing your miniature models to the world. It does not matter whether you like Warhammer, Dungeons & Dragons or anything else, there is something here for everybody. You can see the models of other users on the
-        <a href="{{ route('posts') }}" class="font-semibold text-gray-900 underline dark:text-white decoration-blue-700">posts</a> page. If you see some really nice models, you can give them a like. Before you can like models, you must be logged in first. You can create an
+        Mighty Models is a website for showcasing your miniature models to the world. Whether you are into Warhammer, Dungeons & Dragons, or any other miniature models, there is something here for everyone. You can view models from other users on the
+        <a href="{{ route('posts') }}" class="font-semibold text-gray-900 underline dark:text-white decoration-blue-700">posts</a> page. If you find some models you really like, you can give them a like. Before you can like models, you must be logged in. You can create an
         <a href="{{ route('register') }}" class="font-semibold text-gray-900 underline dark:text-white decoration-blue-700">account</a> or
-        <a href="{{ route('login') }}" class="font-semibold text-gray-900 underline dark:text-white decoration-blue-700">login</a> at the top of this page. When you are logged in and have liked at least five posts, you can start posting your own content. When you post content on the
-        <a href="{{ route('posts.create') }}" class="font-semibold text-gray-900 underline dark:text-white decoration-blue-700">create</a> page, you need to have a title, description, and image. You then have to select one of the tags that applies to your model.
+        <a href="{{ route('login') }}" class="font-semibold text-gray-900 underline dark:text-white decoration-blue-700">log in</a> at the top of this page. Once you are logged in and have liked at least five posts, you can start posting your own content. When posting content on the
+        <a href="{{ route('posts.create') }}" class="font-semibold text-gray-900 underline dark:text-white decoration-blue-700">create</a> page, you need to provide a title, description, and image. You also need to select one of the tags that applies to your model.
     </p>
 
     <div class="flex justify-between mt-8">
