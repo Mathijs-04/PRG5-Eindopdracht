@@ -29,10 +29,15 @@
 * Migrations uitgevoerd
 * Database data op posts-pagina
 * Detailpagina posts gemaakt
-* 
+
 ## 16/10/2024
 * Styling aan overzicht toegevoegt
 * Create functionaliteit gemaakt
 * One-to-many relaties gemaakt
+
+* ## 16/10/2024
+* Tailwind styling toegevoegt
+* Teksten, logo's en afbeeldingen toegevoegt
+* Nieuwe dummy-data aan de database toegevoegt
 
 
