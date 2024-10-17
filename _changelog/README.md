@@ -39,5 +39,6 @@
 * Tailwind styling toegevoegt
 * Teksten, logo's en afbeeldingen toegevoegt
 * Nieuwe dummy-data aan de database toegevoegt
+* Styling aan form toegevoegt
 
 
