@@ -9,4 +9,9 @@
         <a href="{{ route('posts.create') }}" class="font-semibold text-gray-900 underline dark:text-white decoration-blue-700">create</a> page, you need to have a title, description, and image. You then have to select one of the tags that applies to your model.
     </p>
 
+    <div class="flex justify-between mt-8">
+        <img class="w-1/3" src="images/dragon.webp" alt="dragon">
+        <img class="w-1/3" src="images/troll.webp" alt="troll">
+        <img class="w-1/3" src="images/captain.webp" alt="captain">
+    </div>
 </x-layout>
