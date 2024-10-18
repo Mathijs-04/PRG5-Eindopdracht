@@ -61,3 +61,12 @@
 * Als Admin wil ik posts kunnen tonen of verbergen.
 * Als Admin wil ik posts kunnen verwijderen.
 * Als Admin wil ik posts kunnen bewerken.
+
+## TODO:
+* Admin kan posts verbergen op de adminpagina.
+* Admin kan alle posts bewerken of verwijderen op de detailpagina.
+* User kan eigen posts bewerken of verwijderen op de detailpagina.
+* User moet afbeeldingen kunnen uploaden op de createpagina.
+* User moet posts kunnen liken.
+* User kan pas posten na vijf likes.
+* Posts moeten worden gesorteerd op likes of chronologie.
