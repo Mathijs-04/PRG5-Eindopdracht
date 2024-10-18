@@ -1,28 +1,19 @@
-# Changelog Laravel Eindopracht PRG5
+# Changelog Laravel Eindopdracht PRG5
 
-## 09/10/2024
-* Nieuw Laravel project aangemaakt
-* GitHub Repository aangemaakt
-* Breeze Authentication aangemaakt
+## 18/10/2024
+* Adminpagina toegevoegd
+* Adminpagina beveiligd
 
-## 10/10/2024
-* Lesopdrachten afgemaakt
-* Onderzoeksverslag afgemaakt
+## 17/10/2024
+* Tailwind-styling toegevoegd
+* Teksten, logo's en afbeeldingen toegevoegd
+* Nieuwe dummy-data aan de database toegevoegd
+* Styling aan formulier toegevoegd
 
-## 11/10/2024
-* Onderwerp eindopdracht gekozen
-
-## 12/10/2024
-* User Stories gemaakt
-* ERD gemaakt
-
-## 13/10/2024
-* Routes en Views aangemaakt
-
-## 14/10/2024
-* Database gemaakt
-* Check voor ingelogde gebruikers gemaakt
-* Navigatie en styling toegevoegt
+## 16/10/2024
+* Styling aan overzicht toegevoegd
+* Create functionaliteit gemaakt
+* One-to-many relaties gemaakt
 
 ## 15/10/2024
 * Database gemaakt
@@ -30,15 +21,26 @@
 * Database data op posts-pagina
 * Detailpagina posts gemaakt
 
-## 16/10/2024
-* Styling aan overzicht toegevoegt
-* Create functionaliteit gemaakt
-* One-to-many relaties gemaakt
+## 14/10/2024
+* Database gemaakt
+* Check voor ingelogde gebruikers gemaakt
+* Navigatie en styling toegevoegd
 
-* ## 16/10/2024
-* Tailwind styling toegevoegt
-* Teksten, logo's en afbeeldingen toegevoegt
-* Nieuwe dummy-data aan de database toegevoegt
-* Styling aan form toegevoegt
+## 13/10/2024
+* Routes en views aangemaakt
 
+## 12/10/2024
+* User Stories gemaakt
+* ERD gemaakt
 
+## 11/10/2024
+* Onderwerp eindopdracht gekozen
+
+## 10/10/2024
+* Lesopdrachten afgemaakt
+* Onderzoeksverslag afgemaakt
+
+## 09/10/2024
+* Nieuw Laravel project aangemaakt
+* GitHub repository aangemaakt
+* Breeze-authenticatie aangemaakt
