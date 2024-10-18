@@ -43,9 +43,6 @@
                             <a href="/admin" class="{{ Request::is('admin') ? 'text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500' : 'block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent' }}">Admin</a>
                         </li>
                     @endif
-                    <li>
-                        <a href="{{ url('/dashboard') }}" class="{{ Request::is('dashboard') ? 'text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500' : 'rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white' }}">Dashboard</a>
-                    </li>
                  @endauth
                 @if (Route::has('login'))
                     @auth
