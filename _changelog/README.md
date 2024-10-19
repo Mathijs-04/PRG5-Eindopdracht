@@ -69,7 +69,6 @@
 
 ## TODO:
 * Admin kan post status aanpassen op de adminpagina via post.
-* User moet afbeeldingen kunnen uploaden op de createpagina.
 * User moet posts kunnen liken.
 * User kan pas posten na vijf likes.
 * Posts moeten worden gesorteerd op likes of chronologie.
