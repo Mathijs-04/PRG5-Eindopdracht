@@ -3,6 +3,7 @@
 ## 19/10/2024
 * Delete toegevoegd
 * Update toegevoegd
+* Users kunnen nu zelf afbeeldingen uploaden
 
 ## 18/10/2024
 * Adminpagina toegevoegd
