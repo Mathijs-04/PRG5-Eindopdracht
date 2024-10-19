@@ -1,5 +1,8 @@
 # Changelog Laravel Eindopdracht PRG5
 
+## 19/10/2024
+* Delete toegevoegd
+
 ## 18/10/2024
 * Adminpagina toegevoegd
 * Adminpagina beveiligd
