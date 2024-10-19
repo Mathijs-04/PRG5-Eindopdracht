@@ -67,13 +67,11 @@
 * Als Admin wil ik posts kunnen bewerken.
 
 ## TODO:
-* Admin kan posts verbergen op de adminpagina.
-* Admin kan alle posts bewerken of verwijderen op de detailpagina.
-* User kan eigen posts bewerken of verwijderen op de detailpagina.
+* Admin kan post status aanpassen op de adminpagina via post.
 * User moet afbeeldingen kunnen uploaden op de createpagina.
 * User moet posts kunnen liken.
 * User kan pas posten na vijf likes.
 * Posts moeten worden gesorteerd op likes of chronologie.
-* OWASP top 10
-* Correcte beveiliging tegen deeplinking
-* Correcte form validatie
+* OWASP top 10.
+* Correcte beveiliging tegen deeplinking.
+* Correcte form validatie.
