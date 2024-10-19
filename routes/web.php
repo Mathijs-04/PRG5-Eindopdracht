@@ -30,6 +30,9 @@ Route::get('/admin', [AdminController::class, 'index'])->name('admin');
 Route::get('/posts/{id}', [PostController::class, 'show'])->name('show');
 Route::get('/posts/{id}/edit', [PostController::class, 'edit'])->name('edit');
 
+//Store:
+Route::post('/posts', [PostController::class, 'store'])->name('posts.store');
+
 //Dashboard
 Route::get('/dashboard', function () {
     return view('dashboard');

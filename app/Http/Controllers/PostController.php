@@ -31,20 +31,29 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        $post = new Post();
+        $request->validate([
+            'title' => 'required',
+            'description' => 'required',
+            'image' => 'required|image|mimes:jpeg,png,jpg,webp,gif|max:2048',
+        ]);
 
+        $imageName = time().'.'.$request->image->extension();
+        $request->image->move(public_path('images'), $imageName);
+
+        $post = new Post();
         $post->user_id = auth()->id();
         $post->title = $request->input('title');
         $post->description = $request->input('description');
         $post->image_url = $request->input('image_url');
+        $post->image = 'images/'.$imageName;
         $post->tag = $request->input('tag');
         $post->is_visible = 1;
-        $post->created_at = Date::now();
-        $post->updated_at = Date::now();
+        $post->created_at = now();
+        $post->updated_at = now();
 
         $post->save();
 
-        return redirect(route('posts'));
+        return redirect()->route('posts');
     }
 
     /**
@@ -59,9 +68,19 @@ class PostController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Post $post)
     {
-        $post = Post::findOrFail($id);
+        $request->validate([
+            'title' => 'required',
+            'description' => 'required',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,webp,gif|max:2048',
+        ]);
+
+        if ($request->hasFile('image')) {
+            $imageName = time().'.'.$request->image->extension();
+            $request->image->move(public_path('images'), $imageName);
+            $post->image = 'images/'.$imageName;
+        }
 
         $post->title = $request->input('title');
         $post->description = $request->input('description');
@@ -71,7 +90,7 @@ class PostController extends Controller
 
         $post->save();
 
-        return redirect()->route('posts.show', $post->id);
+        return redirect()->route('posts');
     }
 
     /**
