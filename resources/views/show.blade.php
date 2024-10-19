@@ -14,12 +14,18 @@
             <p class="text-gray-300 mt-2">
                 <span class="font-semibold">Posted by:</span> {{ $post->user->name }}
             </p>
-            <form action="{{ route('posts.destroy', $post) }}" method="POST" onsubmit="return confirm('Delete this post?');">
-                @csrf
-                @method('DELETE')
-                <button type="submit" class="inline-flex items-center mt-3 px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                    Delete</button>
-            </form>
+            @auth
+                @if((auth()->user()->is_admin) || ((auth()->user()->id) === ($post->user_id)))
+                    <form action="{{ route('posts.destroy', $post) }}" method="POST" onsubmit="return confirm('Delete this post?');">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit"
+                                class="inline-flex items-center mt-3 px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                            Delete
+                        </button>
+                    </form>
+                @endif
+            @endauth
         </div>
     </div>
 </x-layout>
