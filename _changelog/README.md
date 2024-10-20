@@ -1,5 +1,8 @@
 # Changelog Laravel Eindopdracht PRG5
 
+## 20/10/2024
+* User Stories bijgewerkt
+
 ## 19/10/2024
 * Delete toegevoegd
 * Update toegevoegd
@@ -55,17 +58,17 @@
 ![ERD van mijn Database](./images/erd.png)
 
 ## User Stories
-* Als User wil ik een account aan kunnen maken.
-* Als User wil ik mijn gegevens kunnen aanpassen.
-* Als User wil ik posts kunnen bekijken.
+* Als User wil ik een account aan kunnen maken. ✓
+* Als User wil ik mijn gegevens kunnen aanpassen. ✓
+* Als User wil ik posts kunnen bekijken. ✓
 * Als User wil ik posts kunnen liken.
-* Als User wil ik posts kunnen plaatsen.
-* Als User wil ik mijn posts kunnen bewerken.
-* Als User wil ik mijn posts kunnen verwijderen.
+* Als User wil ik posts kunnen plaatsen. ✓
+* Als User wil ik mijn posts kunnen bewerken. ✓
+* Als User wil ik mijn posts kunnen verwijderen. ✓
 * Als User wil ik posts kunnen zoeken.
 * Als Admin wil ik posts kunnen tonen of verbergen.
-* Als Admin wil ik posts kunnen verwijderen.
-* Als Admin wil ik posts kunnen bewerken.
+* Als Admin wil ik posts kunnen verwijderen. ✓
+* Als Admin wil ik posts kunnen bewerken. ✓
 
 ## TODO:
 * Admin kan post status aanpassen op de adminpagina via post.
