@@ -2,6 +2,7 @@
 
 ## 21/10/2024
 * Form validation toegevoegd
+* Admin visibility toggle gemaakt
 
 ## 20/10/2024
 * User Stories bijgewerkt
