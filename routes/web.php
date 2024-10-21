@@ -12,15 +12,10 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
-//Login-check
-Route::get('/check', function () {
-    return view('check');
-})->middleware('auth');
-
 //Resource:
 Route::resource('posts', PostController::class);
 
-//Routes:
+//Pages:
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/posts', [PostController::class, 'index'])->name('posts');
 Route::get('/about', [AboutController::class, 'index'])->name('about');
