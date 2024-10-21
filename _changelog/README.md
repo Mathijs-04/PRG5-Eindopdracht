@@ -69,12 +69,12 @@
 * Als User wil ik mijn posts kunnen bewerken. ✓
 * Als User wil ik mijn posts kunnen verwijderen. ✓
 * Als User wil ik posts kunnen zoeken.
-* Als Admin wil ik posts kunnen tonen of verbergen.
+* Als Admin wil ik posts kunnen tonen of verbergen. ✓
 * Als Admin wil ik posts kunnen verwijderen. ✓
 * Als Admin wil ik posts kunnen bewerken. ✓
 
 ## TODO:
-* Admin kan post status aanpassen op de adminpagina via post.
+* User moet posts kunnen zoeken.
 * User moet posts kunnen liken.
 * User kan pas posten na vijf likes.
 * Posts moeten worden gesorteerd op likes of chronologie.
