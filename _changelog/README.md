@@ -1,5 +1,8 @@
 # Changelog Laravel Eindopdracht PRG5
 
+## 21/10/2024
+* Form validation toegevoegd
+
 ## 20/10/2024
 * User Stories bijgewerkt
 
