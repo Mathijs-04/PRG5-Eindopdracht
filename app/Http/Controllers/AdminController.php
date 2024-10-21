@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class AdminController extends Controller
 {
     public function index() {
-        $posts = Post::with('user')->get();
+        $posts = Post::with('user')->orderBy('created_at', 'desc')->get();
         return view('admin', compact('posts'));
     }
 

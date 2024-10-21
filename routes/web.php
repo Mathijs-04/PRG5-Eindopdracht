@@ -28,6 +28,9 @@ Route::get('/posts/{id}/edit', [PostController::class, 'edit'])->name('edit');
 //Store:
 Route::post('/posts', [PostController::class, 'store'])->name('posts.store');
 
+//Admin visibility toggle
+Route::post('/posts/{post}/toggle-visibility', [AdminController::class, 'toggleVisibility'])->name('admin.posts.toggleVisibility');
+
 //Dashboard
 Route::get('/dashboard', function () {
     return view('dashboard');
