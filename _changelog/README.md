@@ -78,6 +78,3 @@
 * User moet posts kunnen liken.
 * User kan pas posten na vijf likes.
 * Posts moeten worden gesorteerd op likes of chronologie.
-* OWASP top 10.
-* Correcte beveiliging tegen deeplinking.
-* Correcte form validatie.
