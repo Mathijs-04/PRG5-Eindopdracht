@@ -34,6 +34,7 @@ class PostController extends Controller
         $request->validate([
             'title' => 'required',
             'description' => 'required',
+            'tag' => 'required',
             'image' => 'required|image|mimes:jpeg,png,jpg,webp,gif|max:2048',
         ]);
 
@@ -73,6 +74,7 @@ class PostController extends Controller
         $request->validate([
             'title' => 'required',
             'description' => 'required',
+            'tag' => 'required',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,webp,gif|max:2048',
         ]);
 
