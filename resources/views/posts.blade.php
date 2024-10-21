@@ -1,6 +1,7 @@
 <x-layout>
     <div class="grid-container pt-20">
         @foreach($posts as $post)
+            @if($post->is_visible == 1)
             <div class="max-w-sm bg-black-600 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <a href="#">
                     <img class="rounded-t-lg" src="{{ $post->image ? asset($post->image) : $post->image_url }}" alt="placeholder"/>
@@ -18,6 +19,7 @@
                     </a>
                 </div>
             </div>
+            @endif
         @endforeach
     </div>
     <div class="pb-[20vh]"></div>
