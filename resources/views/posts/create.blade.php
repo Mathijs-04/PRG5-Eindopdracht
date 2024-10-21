@@ -1,6 +1,17 @@
 <x-layout>
     <div class="max-w-md mx-auto">
         <h1 class="text-4xl text-white font-sans my-4 text-left">Create a new post</h1>
+
+        @if ($errors->any())
+            <div class="bg-red-500 text-white p-4 rounded-lg mb-6">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li><br>{{ $error }}<br></li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
         <form action="{{ route('posts.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="relative z-0 w-full mb-5 group">

@@ -32,10 +32,10 @@ class PostController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required',
-            'description' => 'required',
-            'tag' => 'required',
-            'image' => 'required|image|mimes:jpeg,png,jpg,webp,gif|max:2048',
+            'title' => 'required|max:35',
+            'description' => 'required|max:2000',
+            'tag' => 'required|in:Warhammer 40K,Warhammer AOS,GW Middle Earth,Dungeons & Dragons,Other',
+            'image' => 'required|image|mimes:jpeg,png,jpg,webp|max:2048',
         ]);
 
         $imageName = time().'.'.$request->image->extension();
@@ -72,10 +72,10 @@ class PostController extends Controller
     public function update(Request $request, Post $post)
     {
         $request->validate([
-            'title' => 'required',
-            'description' => 'required',
-            'tag' => 'required',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,webp,gif|max:2048',
+            'title' => 'required|max:35',
+            'description' => 'required|max:2000',
+            'tag' => 'required|in:Warhammer 40K,Warhammer AOS,GW Middle Earth,Dungeons & Dragons,Other',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,webp|max:2048',
         ]);
 
         if ($request->hasFile('image')) {
