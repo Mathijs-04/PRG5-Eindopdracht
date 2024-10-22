@@ -110,15 +110,20 @@ class PostController extends Controller
      */
     public function search(Request $request) {
         $searchQuery = $request->input('search');
+        $selectedTag = $request->input('tag');
+
         $posts = Post::where(function($query) use ($searchQuery) {
             $query->where('title', 'LIKE', "%{$searchQuery}%")
                 ->orWhere('description', 'LIKE', "%{$searchQuery}%");
         })
+            ->when($selectedTag, function($query) use ($selectedTag) {
+                return $query->where('tag', $selectedTag);
+            })
             ->where('is_visible', 1)
             ->orderBy('created_at', 'desc')
             ->get();
 
-        $errorMessage = $posts->isEmpty() ? 'No results found for your search query.' : null;
+        $errorMessage = $posts->isEmpty() ? 'No results' : null;
 
         return view('posts', ['posts' => $posts, 'errorMessage' => $errorMessage]);
     }
