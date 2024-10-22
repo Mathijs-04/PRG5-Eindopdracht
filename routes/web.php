@@ -21,12 +21,17 @@ Route::get('/posts', [PostController::class, 'index'])->name('posts');
 Route::get('/about', [AboutController::class, 'index'])->name('about');
 Route::get('/admin', [AdminController::class, 'index'])->name('admin');
 
-// Show and Edit:
+// Show:
 Route::get('/posts/{id}', [PostController::class, 'show'])->name('show');
+
+//Edit:
 Route::get('/posts/{id}/edit', [PostController::class, 'edit'])->name('edit');
 
 //Store:
 Route::post('/posts', [PostController::class, 'store'])->name('posts.store');
+
+//Search:
+Route::post('/posts', [PostController::class, 'search'])->name('posts.search');
 
 //Admin visibility toggle
 Route::post('/posts/{post}/toggle-visibility', [AdminController::class, 'toggleVisibility'])->name('admin.posts.toggleVisibility');

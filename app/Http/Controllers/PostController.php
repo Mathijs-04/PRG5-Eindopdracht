@@ -103,4 +103,19 @@ class PostController extends Controller
         $post->delete();
         return redirect()->route('posts');
     }
+
+    /**
+     * Search posts.
+     */
+    public function search(Request $request) {
+        $searchQuery = $request->input('search');
+        $posts = Post::where(function($query) use ($searchQuery) {
+            $query->where('title', 'LIKE', "%{$searchQuery}%")
+                ->orWhere('description', 'LIKE', "%{$searchQuery}%");
+        })
+            ->where('is_visible', 1)
+            ->get();
+
+        return view('posts', ['posts' => $posts]);
+    }
 }
