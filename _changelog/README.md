@@ -1,5 +1,8 @@
 # Changelog Laravel Eindopdracht PRG5
 
+## 22/10/2024
+* Zoekfunctie toegevoegd
+
 ## 21/10/2024
 * Form validation toegevoegd
 * Admin visibility toggle gemaakt
@@ -70,13 +73,13 @@
 * Als User wil ik posts kunnen plaatsen. ✓
 * Als User wil ik mijn posts kunnen bewerken. ✓
 * Als User wil ik mijn posts kunnen verwijderen. ✓
-* Als User wil ik posts kunnen zoeken.
+* Als User wil ik posts kunnen zoeken. ✓
 * Als Admin wil ik posts kunnen tonen of verbergen. ✓
 * Als Admin wil ik posts kunnen verwijderen. ✓
 * Als Admin wil ik posts kunnen bewerken. ✓
 
 ## TODO:
-* User moet posts kunnen zoeken.
+* User moet posts kunnen zoeken op tag.
 * User moet posts kunnen liken.
 * User kan pas posten na vijf likes.
 * Posts moeten worden gesorteerd op likes of chronologie.
