@@ -10,7 +10,8 @@ class PostController extends Controller
 {
     public function index() {
         $posts = Post::orderBy('created_at', 'desc')->get();
-        return view('posts', compact('posts'));
+        $errorMessage = null;
+        return view('posts', compact('posts', 'errorMessage'));
     }
 
     public function show($id) {
@@ -114,8 +115,11 @@ class PostController extends Controller
                 ->orWhere('description', 'LIKE', "%{$searchQuery}%");
         })
             ->where('is_visible', 1)
+            ->orderBy('created_at', 'desc')
             ->get();
 
-        return view('posts', ['posts' => $posts]);
+        $errorMessage = $posts->isEmpty() ? 'No results found for your search query.' : null;
+
+        return view('posts', ['posts' => $posts, 'errorMessage' => $errorMessage]);
     }
 }

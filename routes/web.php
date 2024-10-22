@@ -12,6 +12,9 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
+//Search:
+Route::get('/posts/search', [PostController::class, 'search'])->name('posts.search');
+
 //Resource:
 Route::resource('posts', PostController::class);
 
@@ -29,9 +32,6 @@ Route::get('/posts/{id}/edit', [PostController::class, 'edit'])->name('edit');
 
 //Store:
 Route::post('/posts', [PostController::class, 'store'])->name('posts.store');
-
-//Search:
-Route::post('/posts', [PostController::class, 'search'])->name('posts.search');
 
 //Admin visibility toggle
 Route::post('/posts/{post}/toggle-visibility', [AdminController::class, 'toggleVisibility'])->name('admin.posts.toggleVisibility');

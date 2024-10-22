@@ -14,6 +14,11 @@
     </form>
 
     <div class="grid-container pt-5">
+        @if($errorMessage)
+            <div class="text-4xl text-white font-sans my-4 text-left">
+                {{ $errorMessage }}
+            </div>
+        @endif
         @foreach($posts as $post)
             @if($post->is_visible == 1)
             <div class="max-w-sm bg-black-600 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
