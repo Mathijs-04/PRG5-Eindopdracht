@@ -2,6 +2,7 @@
 
 ## 22/10/2024
 * Zoekfunctie toegevoegd
+* Tags aan zoekfunctie toegevoegd
 
 ## 21/10/2024
 * Form validation toegevoegd
@@ -66,20 +67,19 @@
 ![ERD van mijn Database](./images/erd.png)
 
 ## User Stories
-* Als User wil ik een account aan kunnen maken. ✓
-* Als User wil ik mijn gegevens kunnen aanpassen. ✓
-* Als User wil ik posts kunnen bekijken. ✓
+* Als User wil ik een account aan kunnen maken.
+* Als User wil ik mijn gegevens kunnen aanpassen.
+* Als User wil ik posts kunnen bekijken.
 * Als User wil ik posts kunnen liken.
-* Als User wil ik posts kunnen plaatsen. ✓
-* Als User wil ik mijn posts kunnen bewerken. ✓
-* Als User wil ik mijn posts kunnen verwijderen. ✓
-* Als User wil ik posts kunnen zoeken. ✓
-* Als Admin wil ik posts kunnen tonen of verbergen. ✓
-* Als Admin wil ik posts kunnen verwijderen. ✓
-* Als Admin wil ik posts kunnen bewerken. ✓
+* Als User wil ik posts kunnen plaatsen.
+* Als User wil ik mijn posts kunnen bewerken.
+* Als User wil ik mijn posts kunnen verwijderen.
+* Als User wil ik posts kunnen zoeken.
+* Als Admin wil ik posts kunnen tonen of verbergen.
+* Als Admin wil ik posts kunnen verwijderen.
+* Als Admin wil ik posts kunnen bewerken.
 
 ## TODO:
-* User moet posts kunnen zoeken op tag.
 * User moet posts kunnen liken.
 * User kan pas posten na vijf likes.
 * Posts moeten worden gesorteerd op likes of chronologie.
