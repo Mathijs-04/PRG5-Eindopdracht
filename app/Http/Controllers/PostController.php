@@ -123,7 +123,7 @@ class PostController extends Controller
             ->orderBy('created_at', 'desc')
             ->get();
 
-        $errorMessage = $posts->isEmpty() ? 'No results' : null;
+        $errorMessage = $posts->isEmpty() ? 'No search results' : null;
 
         return view('posts', ['posts' => $posts, 'errorMessage' => $errorMessage]);
     }

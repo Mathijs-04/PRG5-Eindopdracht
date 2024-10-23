@@ -45,7 +45,7 @@
             @endif
             @foreach($posts as $post)
                 @if($post->is_visible == 1)
-                    <div class="max-w-sm bg-black-600 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                    <div class="max-w-sm bg-black-600 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 max-h-96 overflow-hidden">
                         <a href="#">
                             <img class="rounded-t-lg" src="{{ $post->image ? asset($post->image) : $post->image_url }}" alt="placeholder"/>
                         </a>
@@ -82,5 +82,13 @@
         .grid-container {
             grid-template-columns: repeat(3, 1fr);
         }
+    }
+
+    .max-h-96 {
+        max-height: 40rem;
+    }
+
+    .overflow-hidden {
+        overflow: hidden;
     }
 </style>
