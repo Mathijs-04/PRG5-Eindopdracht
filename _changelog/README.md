@@ -1,5 +1,8 @@
 # Changelog Laravel Eindopdracht PRG5
 
+## 23/10/2024
+* Bug Fixes
+
 ## 22/10/2024
 * Zoekfunctie toegevoegd
 * Tags aan zoekfunctie toegevoegd
@@ -82,4 +85,4 @@
 ## TODO:
 * User moet posts kunnen liken.
 * User kan pas posten na vijf likes.
-* Posts moeten worden gesorteerd op likes of chronologie.
+* Posts moeten worden gesorteerd op likes of datum.
