@@ -1,7 +1,7 @@
 # Changelog Laravel Eindopdracht PRG5
 
 ## 23/10/2024
-* Bug Fixes
+* Bug Fixes en styling
 
 ## 22/10/2024
 * Zoekfunctie toegevoegd
