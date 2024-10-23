@@ -1,6 +1,17 @@
 <x-layout>
     <div class="max-w-md mx-auto">
         <h1 class="text-4xl text-white font-sans my-4 text-left">Edit your post</h1>
+
+        @if ($errors->any())
+            <div class="bg-red-500 text-white p-4 rounded-lg mb-6">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}<br></li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
         <form action="{{ route('posts.update', $post->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
