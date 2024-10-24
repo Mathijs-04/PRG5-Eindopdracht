@@ -16,7 +16,8 @@ class PostController extends Controller
 
     public function show($id) {
         $post = Post::with('user')->findOrFail($id);
-        return view('show', compact('post'));
+        $likeCount = $post->likes()->count();
+        return view('show', compact('post', 'likeCount'));
     }
 
     /**

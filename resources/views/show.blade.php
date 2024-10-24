@@ -14,9 +14,15 @@
             <p class="text-gray-300 mt-2">
                 <span class="font-semibold">Posted by:</span> {{ $post->user->name }}
             </p>
-            @auth
-                @if((auth()->user()->is_admin) || ((auth()->user()->id) === ($post->user_id)))
-                    <div class="flex space-x-2 mt-3">
+            <p class="text-gray-300 mt-2">
+                <span class="font-semibold">♥ </span> {{ $likeCount }}
+            </p>
+            <div class="flex space-x-2 mt-3">
+                <button class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    Like
+                </button>
+                @auth
+                    @if((auth()->user()->is_admin) || ((auth()->user()->id) === ($post->user_id)))
                         <a href="{{ route('posts.edit', $post->id) }}" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                             Edit
                         </a>
@@ -29,9 +35,9 @@
                                 Delete
                             </button>
                         </form>
-                    </div>
-                @endif
-            @endauth
+                    @endif
+                @endauth
+            </div>
         </div>
     </div>
 </x-layout>
