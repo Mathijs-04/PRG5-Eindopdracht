@@ -1,5 +1,8 @@
 # Changelog Laravel Eindopdracht PRG5
 
+## 24/10/2024
+* Bug Fixes en styling
+
 ## 23/10/2024
 * Bug Fixes en styling
 
