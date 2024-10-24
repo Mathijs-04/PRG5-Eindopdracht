@@ -1,7 +1,7 @@
 <x-layout>
     @if (auth()->check() && auth()->user()->is_admin)
         <h1 class="text-4xl text-white font-sans my-4">Manage visibility</h1>
-        <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+        <div class="relative overflow-x-auto shadow-md sm:rounded-lg pb-10">
             <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                 <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                 <tr>
