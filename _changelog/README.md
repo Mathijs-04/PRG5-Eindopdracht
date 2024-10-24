@@ -2,6 +2,7 @@
 
 ## 24/10/2024
 * Bug Fixes en styling
+* Like button toegevoegd
 
 ## 23/10/2024
 * Bug Fixes en styling
