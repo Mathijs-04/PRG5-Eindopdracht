@@ -15,6 +15,9 @@ Route::get('/welcome', function () {
 //Search:
 Route::get('/posts/search', [PostController::class, 'search'])->name('posts.search');
 
+//Like
+Route::post('/posts/{post}/like', [PostController::class, 'like'])->name('posts.like');
+
 //Resource:
 Route::resource('posts', PostController::class);
 

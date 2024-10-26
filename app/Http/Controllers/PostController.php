@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use App\Models\Like;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Date;
+use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
@@ -127,5 +129,22 @@ class PostController extends Controller
         $errorMessage = $posts->isEmpty() ? 'No search results' : null;
 
         return view('posts', ['posts' => $posts, 'errorMessage' => $errorMessage]);
+    }
+
+    public function like(Post $post) {
+        $user = Auth::user();
+
+        $existingLike = Like::where('user_id', $user->id)->where('post_id', $post->id)->first();
+
+        if ($existingLike) {
+            $existingLike->delete();
+        } else {
+            Like::create([
+                'user_id' => $user->id,
+                'post_id' => $post->id,
+            ]);
+        }
+
+        return redirect()->route('show', $post->id);
     }
 }
