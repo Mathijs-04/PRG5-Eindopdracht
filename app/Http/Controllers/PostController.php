@@ -11,7 +11,10 @@ use Illuminate\Support\Facades\Auth;
 class PostController extends Controller
 {
     public function index() {
-        $posts = Post::orderBy('created_at', 'desc')->get();
+        $posts = Post::with('likes')->orderBy('created_at', 'desc')->get();
+        foreach ($posts as $post) {
+            $post->likeCount = $post->likes->count();
+        }
         $errorMessage = null;
         return view('posts', compact('posts', 'errorMessage'));
     }
@@ -23,17 +26,11 @@ class PostController extends Controller
         return view('show', compact('post', 'likeCount', 'existingLike'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
         return view('posts.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
         $request->validate([
@@ -62,18 +59,12 @@ class PostController extends Controller
         return redirect()->route('posts');
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
     public function edit($id)
     {
         $post = Post::findOrFail($id);
         return view('edit', compact('post'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(Request $request, Post $post)
     {
         $request->validate([
@@ -100,18 +91,12 @@ class PostController extends Controller
         return redirect()->route('posts');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(Post $post)
     {
         $post->delete();
         return redirect()->route('posts');
     }
 
-    /**
-     * Search posts.
-     */
     public function search(Request $request) {
         $searchQuery = $request->input('search');
         $selectedTag = $request->input('tag');
