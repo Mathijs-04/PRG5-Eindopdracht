@@ -1,7 +1,8 @@
 # Changelog Laravel Eindopdracht PRG5
 
 ## 25/10/2024
-* Updated ERD
+* ERD bijgewerkt
+* Like functionaliteit toegevoegd
 
 ## 24/10/2024
 * Bug Fixes en styling
@@ -90,6 +91,5 @@
 * Als Admin wil ik posts kunnen bewerken.
 
 ## TODO:
-* User moet posts kunnen liken.
-* User kan pas posten na vijf likes.
+* User kan pas posten na vijf likes (diepere validatie).
 * Posts moeten worden gesorteerd op likes of datum.
