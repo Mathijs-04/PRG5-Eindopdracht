@@ -19,7 +19,8 @@ class PostController extends Controller
     public function show($id) {
         $post = Post::with('user')->findOrFail($id);
         $likeCount = $post->likes()->count();
-        return view('show', compact('post', 'likeCount'));
+        $existingLike = auth()->user() ? $post->likes()->where('user_id', auth()->id())->first() : null;
+        return view('show', compact('post', 'likeCount', 'existingLike'));
     }
 
     /**
