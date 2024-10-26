@@ -1,5 +1,8 @@
 # Changelog Laravel Eindopdracht PRG5
 
+## 25/10/2024
+* Updated ERD
+
 ## 24/10/2024
 * Bug Fixes en styling
 * Like button toegevoegd
