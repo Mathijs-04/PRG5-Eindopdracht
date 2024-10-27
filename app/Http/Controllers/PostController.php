@@ -28,7 +28,9 @@ class PostController extends Controller
 
     public function create()
     {
-        return view('posts.create');
+        $userLikeCount = $this->userLikeCount();
+        $allowedToPost = $userLikeCount >= 5;
+        return view('posts.create', compact('allowedToPost'));
     }
 
     public function store(Request $request)
@@ -132,5 +134,9 @@ class PostController extends Controller
         }
 
         return redirect()->route('show', $post->id);
+    }
+
+    public function userLikeCount() {
+        return Like::where('user_id', auth()->id())->count();
     }
 }
