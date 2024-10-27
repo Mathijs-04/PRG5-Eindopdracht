@@ -94,5 +94,4 @@
 * Als Admin wil ik posts kunnen bewerken.
 
 ## TODO:
-* User kan pas posten na vijf likes (diepere validatie).
 * Posts moeten worden gesorteerd op likes of datum.
