@@ -16,4 +16,8 @@
             </div>
         </div>
     </div>
+
+    <div class="flex justify-center mt-8">
+        <img src="{{ asset('images/dreadnought2.webp') }}" alt="dreadnought">
+    </div>
 </x-app-layout>
