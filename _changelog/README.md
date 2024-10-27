@@ -1,5 +1,8 @@
 # Changelog Laravel Eindopdracht PRG5
 
+## 26/10/2024
+* Diepere validatie toegevoegd
+ 
 ## 25/10/2024
 * ERD bijgewerkt
 * Like functionaliteit toegevoegd
