@@ -78,6 +78,7 @@
     <div class="pb-[20vh]"></div>
 </x-layout>
 
+{{--Styling for the post grid--}}
 <style>
     .grid-container {
         display: grid;

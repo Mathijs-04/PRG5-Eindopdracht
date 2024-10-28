@@ -126,8 +126,8 @@ class PostController extends Controller
                 $post->likeCount = $post->likes->count();
             });
 
-        $errorMessage = $posts->isEmpty() ? 'No search results' : null;
         $isSearchResult = true;
+        $errorMessage = $posts->isEmpty() ? 'No search results' : null;
 
         return view('posts', compact('posts', 'errorMessage', 'isSearchResult'));
     }

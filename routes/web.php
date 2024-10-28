@@ -21,13 +21,19 @@ Route::post('/posts/{post}/like', [PostController::class, 'like'])->name('posts.
 //Resource:
 Route::resource('posts', PostController::class);
 
-//Pages:
+//Home
 Route::get('/', [HomeController::class, 'index'])->name('home');
+
+//Posts
 Route::get('/posts', [PostController::class, 'index'])->name('posts');
+
+//About
 Route::get('/about', [AboutController::class, 'index'])->name('about');
+
+//Admin
 Route::get('/admin', [AdminController::class, 'index'])->name('admin');
 
-// Show:
+//Show:
 Route::get('/posts/{id}', [PostController::class, 'show'])->name('show');
 
 //Edit:
