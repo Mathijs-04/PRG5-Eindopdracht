@@ -1,5 +1,4 @@
 <x-layout>
-
     <div class="container mx-auto pt-5 flex flex-col min-h-screen">
         <div class="flex justify-center items-center relative">
             <form id="search" action="{{ route('posts.search') }}" method="GET" class="max-w-md">
@@ -27,18 +26,25 @@
                     <button type="submit" class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
                 </div>
             </form>
-            <form class="absolute right-0">
-                @csrf
-                <select id="sort" name="sort" class="block p-4 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                    <option class="bg-gray-900" value="" disabled selected>Sort by</option>
-                    <option class="bg-gray-900" value="likes_desc">Most Likes</option>
-                    <option class="bg-gray-900" value="likes_asc">Least Likes</option>
-                    <option class="bg-gray-900" value="date_desc">Newest</option>
-                    <option class="bg-gray-900" value="date_asc">Oldest</option>
-                </select>
-            </form>
+            @if($isSearchResult)
+                <a href="{{ route('posts') }}" class="absolute right-0 block p-4 pr-7 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 flex items-center">
+                    <svg class="rtl:rotate-180 w-3.5 h-3.5 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5H1m0 0 4-4M1 5l4 4"/>
+                    </svg>
+                    See all posts
+                </a>
+            @else
+                <form action="{{ route('posts') }}" method="GET" class="absolute right-0">
+                    @csrf
+                    <select name="sort" onchange="this.form.submit()" class="block p-4 pr-7 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        <option value="date_desc" {{ request('sort') === 'date_desc' ? 'selected' : '' }}>Newest</option>
+                        <option value="date_asc" {{ request('sort') === 'date_asc' ? 'selected' : '' }}>Oldest</option>
+                        <option value="likes_desc" {{ request('sort') === 'likes_desc' ? 'selected' : '' }}>Most Likes</option>
+                        <option value="likes_asc" {{ request('sort') === 'likes_asc' ? 'selected' : '' }}>Least Likes</option>
+                    </select>
+                </form>
+            @endif
         </div>
-
         <div class="grid-container pt-5 flex-grow">
             @if($errorMessage)
                 <div class="text-4xl text-white font-sans my-4 text-left mb-96">

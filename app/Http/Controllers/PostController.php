@@ -5,18 +5,32 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use App\Models\Like;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
-    public function index() {
-        $posts = Post::with('likes')->orderBy('created_at', 'desc')->get();
+    public function index(Request $request) {
+        $sort = $request->input('sort', 'date_desc');
+        $postsQuery = Post::with('likes');
+
+        if ($sort === 'date_asc') {
+            $postsQuery->orderBy('created_at', 'asc');
+        } elseif ($sort === 'likes_desc') {
+            $postsQuery->withCount('likes')->orderBy('likes_count', 'desc');
+        } elseif ($sort === 'likes_asc') {
+            $postsQuery->withCount('likes')->orderBy('likes_count', 'asc');
+        } else {
+            $postsQuery->orderBy('created_at', 'desc');
+        }
+
+        $posts = $postsQuery->get();
         foreach ($posts as $post) {
             $post->likeCount = $post->likes->count();
         }
-        $errorMessage = null;
-        return view('posts', compact('posts', 'errorMessage'));
+
+        $isSearchResult = false;
+        $errorMessage = $posts->isEmpty() ? 'No posts found' : null;
+        return view('posts', compact('posts', 'errorMessage', 'isSearchResult'));
     }
 
     public function show($id) {
@@ -26,15 +40,13 @@ class PostController extends Controller
         return view('show', compact('post', 'likeCount', 'existingLike'));
     }
 
-    public function create()
-    {
+    public function create() {
         $userLikeCount = $this->userLikeCount();
         $allowedToPost = $userLikeCount >= 5;
         return view('posts.create', compact('allowedToPost'));
     }
 
-    public function store(Request $request)
-    {
+    public function store(Request $request) {
         $request->validate([
             'title' => 'required|max:35',
             'description' => 'required|max:2000',
@@ -42,7 +54,7 @@ class PostController extends Controller
             'image' => 'required|image|mimes:jpeg,png,jpg,webp|max:2048',
         ]);
 
-        $imageName = time().'.'.$request->image->extension();
+        $imageName = time() . '.' . $request->image->extension();
         $request->image->move(public_path('images'), $imageName);
 
         $post = new Post();
@@ -50,7 +62,7 @@ class PostController extends Controller
         $post->title = $request->input('title');
         $post->description = $request->input('description');
         $post->image_url = $request->input('image_url');
-        $post->image = 'images/'.$imageName;
+        $post->image = 'images/' . $imageName;
         $post->tag = $request->input('tag');
         $post->is_visible = 1;
         $post->created_at = now();
@@ -61,14 +73,12 @@ class PostController extends Controller
         return redirect()->route('posts');
     }
 
-    public function edit($id)
-    {
+    public function edit($id) {
         $post = Post::findOrFail($id);
         return view('edit', compact('post'));
     }
 
-    public function update(Request $request, Post $post)
-    {
+    public function update(Request $request, Post $post) {
         $request->validate([
             'title' => 'required|max:35',
             'description' => 'required|max:2000',
@@ -77,9 +87,9 @@ class PostController extends Controller
         ]);
 
         if ($request->hasFile('image')) {
-            $imageName = time().'.'.$request->image->extension();
+            $imageName = time() . '.' . $request->image->extension();
             $request->image->move(public_path('images'), $imageName);
-            $post->image = 'images/'.$imageName;
+            $post->image = 'images/' . $imageName;
         }
 
         $post->title = $request->input('title');
@@ -93,8 +103,7 @@ class PostController extends Controller
         return redirect()->route('posts');
     }
 
-    public function destroy(Post $post)
-    {
+    public function destroy(Post $post) {
         $post->delete();
         return redirect()->route('posts');
     }
@@ -103,25 +112,24 @@ class PostController extends Controller
         $searchQuery = $request->input('search');
         $selectedTag = $request->input('tag');
 
-        $posts = Post::where(function($query) use ($searchQuery) {
+        $posts = Post::where(function ($query) use ($searchQuery) {
             $query->where('title', 'LIKE', "%{$searchQuery}%")
                 ->orWhere('description', 'LIKE', "%{$searchQuery}%");
         })
-            ->when($selectedTag, function($query) use ($selectedTag) {
+            ->when($selectedTag, function ($query) use ($selectedTag) {
                 return $query->where('tag', $selectedTag);
             })
             ->where('is_visible', 1)
             ->with('likes')
-            ->orderBy('created_at', 'desc')
-            ->get();
-
-        foreach ($posts as $post) {
-            $post->likeCount = $post->likes->count();
-        }
+            ->get()
+            ->each(function ($post) {
+                $post->likeCount = $post->likes->count();
+            });
 
         $errorMessage = $posts->isEmpty() ? 'No search results' : null;
+        $isSearchResult = true;
 
-        return view('posts', ['posts' => $posts, 'errorMessage' => $errorMessage]);
+        return view('posts', compact('posts', 'errorMessage', 'isSearchResult'));
     }
 
     public function like(Post $post) {
