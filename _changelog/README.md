@@ -1,11 +1,17 @@
 # Changelog Laravel Eindopdracht PRG5
 
-## 26/10/2024
+## 28/10/2024
+* Sorteringssysteem toegevoegd
+
+## 27/10/2024
 * Diepere validatie toegevoegd
  
-## 25/10/2024
+## 26/10/2024
 * ERD bijgewerkt
 * Like functionaliteit toegevoegd
+
+## 25/10/2024
+* Bug Fixes en styling
 
 ## 24/10/2024
 * Bug Fixes en styling
