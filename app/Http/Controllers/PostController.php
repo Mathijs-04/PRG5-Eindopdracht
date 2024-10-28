@@ -111,8 +111,13 @@ class PostController extends Controller
                 return $query->where('tag', $selectedTag);
             })
             ->where('is_visible', 1)
+            ->with('likes')
             ->orderBy('created_at', 'desc')
             ->get();
+
+        foreach ($posts as $post) {
+            $post->likeCount = $post->likes->count();
+        }
 
         $errorMessage = $posts->isEmpty() ? 'No search results' : null;
 
