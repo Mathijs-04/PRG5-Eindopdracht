@@ -8,8 +8,12 @@ use Illuminate\Http\Request;
 class AdminController extends Controller
 {
     public function index() {
-        $posts = Post::with('user')->orderBy('created_at', 'desc')->get();
-        return view('admin', compact('posts'));
+        if (auth()->check() && auth()->user()->is_admin) {
+            $posts = Post::with('user')->orderBy('created_at', 'desc')->get();
+            return view('admin', compact('posts'));
+        } else {
+            return redirect()->route('home');
+        }
     }
 
     public function toggleVisibility(Request $request, Post $post) {
