@@ -75,7 +75,12 @@ class PostController extends Controller
 
     public function edit($id) {
         $post = Post::findOrFail($id);
-        return view('edit', compact('post'));
+
+        if (auth()->check() && (auth()->user()->is_admin || auth()->user()->id === $post->user_id)) {
+            return view('edit', compact('post'));
+        } else {
+            return redirect()->route('posts');
+        }
     }
 
     public function update(Request $request, Post $post) {
