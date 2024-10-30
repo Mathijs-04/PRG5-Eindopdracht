@@ -109,8 +109,12 @@ class PostController extends Controller
     }
 
     public function destroy(Post $post) {
-        $post->delete();
-        return redirect()->route('posts');
+        if (auth()->check() && (auth()->user()->is_admin || auth()->user()->id === $post->user_id)) {
+            $post->delete();
+            return redirect()->route('posts')->with('success', 'Post deleted successfully.');
+        } else {
+            return redirect()->route('posts')->with('error', 'You are not authorized to delete this post.');
+        }
     }
 
     public function search(Request $request) {
