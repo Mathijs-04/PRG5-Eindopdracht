@@ -2,6 +2,7 @@
 
 ## 30/10/2024
 * Extra beveiliging toegevoegd
+* Ongebruikte bestanden verwijderd
 
 ## 29/10/2024
 * Styling bijgewerkt
@@ -75,7 +76,6 @@
 ## 12/10/2024
 * User Stories gemaakt
 * ERD gemaakt
-* _Note: ERD en User Stories staan onderaan in de Changelog_
 
 ## 11/10/2024
 * Onderwerp eindopdracht gekozen
