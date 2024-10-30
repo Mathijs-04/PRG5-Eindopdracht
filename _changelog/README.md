@@ -1,5 +1,8 @@
 # Changelog Laravel Eindopdracht PRG5
 
+## 29/10/2024
+* Styling bijgewerkt
+
 ## 28/10/2024
 * Sorteringssysteem toegevoegd
 
