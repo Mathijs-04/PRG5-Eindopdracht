@@ -32,8 +32,8 @@
 * Tags aan zoekfunctie toegevoegd
 
 ## 21/10/2024
-* Form validation toegevoegd
-* Admin visibility toggle gemaakt
+* Form validatie toegevoegd
+* Admin visibility toggle toegevoegd
 * Zoekbalk toegevoegd
 
 ## 20/10/2024
@@ -42,7 +42,7 @@
 ## 19/10/2024
 * Delete toegevoegd
 * Update toegevoegd
-* Users kunnen nu zelf afbeeldingen uploaden
+* File upload toegevoegd
 
 ## 18/10/2024
 * Adminpagina toegevoegd
@@ -51,7 +51,7 @@
 ## 17/10/2024
 * Tailwind-styling toegevoegd
 * Teksten, logo's en afbeeldingen toegevoegd
-* Nieuwe dummy-data aan de database toegevoegd
+* Nieuwe data aan database toegevoegd
 * Styling aan formulier toegevoegd
 
 ## 16/10/2024
@@ -60,10 +60,10 @@
 * One-to-many relaties gemaakt
 
 ## 15/10/2024
-* Database gemaakt
+* Database bewerkt
 * Migrations uitgevoerd
-* Database data op posts-pagina
-* Detailpagina posts gemaakt
+* Data getoond op posts-pagina
+* Detailpagina posts toegevoegd
 
 ## 14/10/2024
 * Database gemaakt
@@ -88,18 +88,19 @@
 * Nieuw Laravel project aangemaakt
 * GitHub repository aangemaakt
 * Breeze-authenticatie aangemaakt
+* Changelog aangemaakt
 
 ## ERD
 ![ERD van mijn Database](./images/erd.png)
 
 ## User Stories
-* Als User wil ik een account aan kunnen maken.
-* Als User wil ik posts kunnen bekijken.
-* Als User wil ik posts kunnen liken.
-* Als User wil ik posts kunnen plaatsen.
-* Als User wil ik mijn posts kunnen bewerken.
-* Als User wil ik mijn posts kunnen verwijderen.
-* Als User wil ik posts kunnen zoeken.
-* Als Admin wil ik posts kunnen tonen of verbergen.
-* Als Admin wil ik posts kunnen verwijderen.
-* Als Admin wil ik posts kunnen bewerken.
+* Als User wil ik een account aan kunnen maken
+* Als User wil ik posts kunnen bekijken
+* Als User wil ik posts kunnen liken
+* Als User wil ik posts kunnen plaatsen
+* Als User wil ik mijn posts kunnen bewerken
+* Als User wil ik mijn posts kunnen verwijderen
+* Als User wil ik posts kunnen zoeken
+* Als Admin wil ik posts kunnen tonen of verbergen
+* Als Admin wil ik posts kunnen verwijderen
+* Als Admin wil ik posts kunnen bewerken
