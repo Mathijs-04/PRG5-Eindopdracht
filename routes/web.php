@@ -7,11 +7,6 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-//Laravel Welcome
-Route::get('/welcome', function () {
-    return view('welcome');
-});
-
 //Search:
 Route::get('/posts/search', [PostController::class, 'search'])->name('posts.search');
 
@@ -45,12 +40,19 @@ Route::post('/posts', [PostController::class, 'store'])->name('posts.store');
 //Admin visibility toggle
 Route::post('/posts/{post}/toggle-visibility', [AdminController::class, 'toggleVisibility'])->name('admin.posts.toggleVisibility');
 
-//Dashboard
+
+
+//Default Laravel Welcome
+Route::get('/welcome', function () {
+    return view('welcome');
+});
+
+//Default Laravel Dashboard
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-//Profile
+//Default Breeze Profile
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
